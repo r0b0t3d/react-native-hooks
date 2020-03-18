@@ -1,0 +1,8 @@
+{
+  "short_name": "@tl/react-native-hooks",
+  "name": "@tl/react-native-hooks",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
