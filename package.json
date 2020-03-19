@@ -24,8 +24,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r0b0t3d/react-native-social-share",
-    "baseUrl": "https://github.com/r0b0t3d/react-native-social-share/tree/master/packages/twitter"
+    "url": "git+https://github.com/r0b0t3d/react-native-hooks",
+    "baseUrl": "https://github.com/r0b0t3d/react-native-hooks"
   },
   "keywords": [
     "react-native"
