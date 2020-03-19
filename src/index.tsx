@@ -6,7 +6,7 @@ import useKeyboardEvent from './useKeyboardEvent';
 import usePrevious from './usePrevious';
 import useTimeout from './useTimeout';
 
-export default {
+export {
   useAndroidBack,
   useAppState,
   useDebouce,
