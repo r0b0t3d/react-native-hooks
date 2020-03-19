@@ -9,11 +9,7 @@ import { Callback } from './types';
  * @param {number} [delay=-1] If you like to stop this timer, just set it to -1.
  * @param {boolean} [firstTick=false] whether callback will be triggered at the start of window time
  */
-export default function useInterval(
-  callback: Callback,
-  delay = -1,
-  firstTick = false,
-) {
+export default function useInterval(callback: Callback, delay = -1, firstTick = false) {
   const savedCallback = useRef<Callback>();
 
   // Remember the latest callback.

@@ -1,15 +1,7 @@
 import { useRef, useEffect } from 'react';
-import {
-  Keyboard,
-  KeyboardEventListener,
-  KeyboardEventName,
-  KeyboardEvent,
-} from 'react-native';
+import { Keyboard, KeyboardEventListener, KeyboardEventName, KeyboardEvent } from 'react-native';
 
-export default function useKeyboardEvent(
-  eventName: KeyboardEventName,
-  callback: KeyboardEventListener,
-) {
+export default function useKeyboardEvent(eventName: KeyboardEventName, callback: KeyboardEventListener) {
   const savedCallback = useRef<KeyboardEventListener>();
   useEffect(() => {
     savedCallback.current = callback;

@@ -3,7 +3,7 @@ import { Callback } from './types';
 
 export default function useTimeout(callback: Callback, duration = -1) {
   const savedCallback = useRef<Callback>();
-  
+
   useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);
