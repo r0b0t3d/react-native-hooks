@@ -11,7 +11,7 @@ import { Callback } from './types';
  */
 export default function useInterval(
   callback: Callback,
-  delay: number = -1,
+  delay = -1,
   firstTick = false,
 ) {
   const savedCallback = useRef<Callback>();
