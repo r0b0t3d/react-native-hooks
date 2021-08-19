@@ -13,9 +13,9 @@ export default function useAppState(callback: (state: AppStateStatus) => void) {
       savedCallback.current(nextAppState);
     }
 
-    AppState.addEventListener('change', onAppStateChange);
+    const listener = AppState.addEventListener('change', onAppStateChange);
     return () => {
-      AppState.removeEventListener('change', onAppStateChange);
+      listener.remove();
     };
   }, []);
 }
