@@ -14,7 +14,7 @@ export default function useAppState(callback: (state: AppStateStatus) => void) {
     }
 
     const subscription = AppState.addEventListener('change', onAppStateChange);
-    
+
     return () => {
       subscription.remove();
     };
