@@ -13,9 +13,9 @@ export default function useKeyboardEvent(eventName: KeyboardEventName, callback:
         savedCallback.current(event);
       }
     }
-    const unsubcribe = Keyboard.addListener(eventName, listener);
+    const subscription = Keyboard.addListener(eventName, listener);
     return () => {
-      unsubcribe.remove();
+      subscription.remove();
     };
   }, []);
 }
