@@ -7,24 +7,17 @@
 ## Install
 
 ```bash
-npm install --save @tl/react-native-hooks
+yarn add @r0b0t3d/react-native-hooks
 ```
 
-## Usage
-
-```tsx
-import * as React from 'react'
-
-import MyComponent from '@tl/react-native-hooks'
-
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
+## Hooks
+- useAndroidBack
+- useAppState
+- useDebounce
+- useInterval
+- useKeyboardEvent
+- usePrevious
+- useTimeout
 
 ## License
 
