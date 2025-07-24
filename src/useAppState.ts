@@ -21,15 +21,11 @@ export default function useAppState(callback: (state: AppStateStatus) => void, d
   }, [callback]);
 
   useEffect(() => {
-    const subscription = AppState.addEventListener('change', (state) => {
+    const subscription = AppState.addEventListener('change', state => {
       // On Android, when checking permisions, the app trigger background state
       // If the permission was blocked, app instanly trigger active state
       // This behavior sometime causing loop if we continue checking permission on app state change
-      if (
-        Platform.OS === 'android' &&
-        lastUpdatedAt.current > 0 &&
-        Date.now() - lastUpdatedAt.current < delay
-      ) {
+      if (Platform.OS === 'android' && lastUpdatedAt.current > 0 && Date.now() - lastUpdatedAt.current < delay) {
         return;
       }
       lastUpdatedAt.current = Date.now();
