@@ -12,7 +12,7 @@ import { useEffect, useRef } from 'react';
  * @param callback - The callback to call when the app state changes
  * @param delay - Android only: The delay in milliseconds to prevent the callback from being called too often
  */
-export default function useAppState(callback: (state: AppStateStatus) => void, delay: number = 1000) {
+export default function useAppState(callback: (state: AppStateStatus) => void, delay = 1000) {
   const savedCallback = useRef<any>();
   const lastUpdatedAt = useRef<number>(-1);
 
